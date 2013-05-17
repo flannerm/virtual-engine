@@ -1,0 +1,91 @@
+﻿<Window x:Class="Virtual.Engine.Views.CameraDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="300" Width="720" Closing="Window_Closing">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Red" BorderThickness="2" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Models/sec:"/>
+                <Label x:Name="packetRateValueLabel" Grid.Row="0" Grid.Column="1" Content="N/A"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="Models Skipped:"/>
+                <Label x:Name="missedPacketsValueLabel" Grid.Row="1" Grid.Column="1" Content="N/A"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Models Dropped:"/>
+                <Label x:Name="droppedPacketsValueLabel" Grid.Row="2" Grid.Column="1" Content="N/A"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Content="Models Queued:"/>
+                <Label x:Name="queuedModelsValueLabel" Grid.Row="3" Grid.Column="1" Content="N/A"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Content="Multicast IP" HorizontalAlignment="Left"/>
+                <Label Grid.Row="4" Grid.Column="1" Content="Port" HorizontalAlignment="Left"/>
+
+                <TextBox x:Name="multicastIpTextBox" Grid.Row="5" Grid.Column="0" Width="150" Height="30" HorizontalAlignment="Left" Margin="5,0,0,5"/>
+                <TextBox x:Name="portTextbox" Grid.Row="5" Grid.Column="1" Width="100" Height="30" HorizontalAlignment="Left" Margin="5,0,0,5"/>
+
+                <Button x:Name="btnNetworkCapture" Grid.Row="0" Grid.Column="2" Width="130" Height="40" Content="Start Network Capture" Background="Black" Foreground="White"
+                        Template="{StaticResource RegularButton}" Click="btnNetworkCapture_Click"  Margin="5"/>
+
+                <Button x:Name="btnSDICapture" Grid.Row="0" Grid.Column="3" Width="130" Height="40" Content="Start SDI Capture" Background="Black" Foreground="White"
+                        Template="{StaticResource RegularButton}" Click="btnSDICapture_Click"  Margin="5"/>
+
+                <Button x:Name="btnSerialCapture" Grid.Row="0" Grid.Column="4" Width="130" Height="40" Content="Start Serial Capture" Background="Black" Foreground="White"
+                        Template="{StaticResource RegularButton}" Click="btnSerialCapture_Click"  Margin="5"/>
+
+                <Button x:Name="btnStopCapture" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Width="280" Height="40" Content="Stop Capture" Background="Black" Foreground="White"
+                        Template="{StaticResource RegularButton}" Click="btnStopCapture_Click"  Margin="5"/>
+
+                <!--<Button x:Name="btnLivePreview" Grid.Row="1" Grid.Column="4" Width="130" Height="40" Content="Show Live Preview" Background="Black" Foreground="White"
+                        Template="{StaticResource RegularButton}" Click="btnLivePreview_Click"  Margin="5"/>-->
+
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Orientation="Horizontal">
+            <Label Content="Dropped Frames:"/>
+            <Label x:Name="droppedOutputFramesValueLabel" Content="N/A" />
+            <Label Content="Rotate:" Margin="50,0,0,0"/>
+            <TextBox x:Name="txtRotate" Width="100" />
+        </StackPanel>
+    </Grid>
+    
+</Window>
+

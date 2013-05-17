@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virtual.Engine", "Virtual.Engine.csproj", "{EEC91383-21B0-4F43-8DD5-1200D80FDA38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralMatrix", "..\..\VirtualCameraLibrary\GeneralMatrix\GeneralMatrix.csproj", "{B83B6965-15F7-4972-9432-F5FA51EE0D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualCameraLibrary", "..\..\VirtualCameraLibrary\VirtualCameraLibrary\VirtualCameraLibrary.csproj", "{10926781-6A38-4288-854F-32698F6CD880}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEC91383-21B0-4F43-8DD5-1200D80FDA38}.Debug|x86.ActiveCfg = Debug|x86
+		{EEC91383-21B0-4F43-8DD5-1200D80FDA38}.Debug|x86.Build.0 = Debug|x86
+		{EEC91383-21B0-4F43-8DD5-1200D80FDA38}.Release|x86.ActiveCfg = Release|x86
+		{EEC91383-21B0-4F43-8DD5-1200D80FDA38}.Release|x86.Build.0 = Release|x86
+		{B83B6965-15F7-4972-9432-F5FA51EE0D74}.Debug|x86.ActiveCfg = Debug|x86
+		{B83B6965-15F7-4972-9432-F5FA51EE0D74}.Debug|x86.Build.0 = Debug|x86
+		{B83B6965-15F7-4972-9432-F5FA51EE0D74}.Release|x86.ActiveCfg = Release|x86
+		{B83B6965-15F7-4972-9432-F5FA51EE0D74}.Release|x86.Build.0 = Release|x86
+		{10926781-6A38-4288-854F-32698F6CD880}.Debug|x86.ActiveCfg = Debug|x86
+		{10926781-6A38-4288-854F-32698F6CD880}.Debug|x86.Build.0 = Debug|x86
+		{10926781-6A38-4288-854F-32698F6CD880}.Release|x86.ActiveCfg = Release|x86
+		{10926781-6A38-4288-854F-32698F6CD880}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

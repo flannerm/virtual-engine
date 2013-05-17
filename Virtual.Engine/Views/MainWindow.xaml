@@ -1,0 +1,53 @@
+﻿<Window x:Class="Virtual.Engine.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:AxVideoToolkitLib="clr-namespace:AxVideoToolkitLib;assembly=CaminoVTXRuntime"
+        xmlns:SceneBrowserNET="clr-namespace:SceneBrowserNET;assembly=CaminoVTXRuntime"
+        Title="Virtual Engine" Height="800" Width="1525">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+            <MenuItem Header="Setup">
+                <!-->scene is being initialized when command is received from front end-->
+                <!--<MenuItem x:Name="mnuInitVGA" Header="Initialize VGA" Click="mnuInitVGA_Click"/>
+                <MenuItem x:Name="mnuInit720AJA" Header="Initialize 720p (AJA)" Click="mnuInit720AJA_Click"/>
+                <MenuItem x:Name="mnuInit720XMIO" Header="Initialize 720p (XMIO)" Click="mnuInit720XMIO_Click"/>
+                <MenuItem x:Name="mnuInit1080_50XMIO" Header="Initialize 1080i 50hz (XMIO)" Click="mnuInit1080_50XMIO_Click"/>-->
+                <MenuItem x:Name="mnuCameraData" Header="Camera Data" Click="mnuCameraData_Click"/>
+                <MenuItem x:Name="mnuTiming" Header="Timing" Click="mnuTiming_Click"/>
+            </MenuItem>
+
+            <!--<MenuItem Header="Tools">
+                <MenuItem x:Name="mnuInputVFMModel" Header="Input VFM Model" Click="mnuInputVFMModel_Click"/>
+                <MenuItem x:Name="mnuInputRegCamModel" Header="Input RegCam Model" Click="mnuInputRegCamModel_Click"/>
+            </MenuItem>-->
+
+            <!--<MenuItem Header="Test">
+                <MenuItem x:Name="mnuPlotBirdiesPreview" Header="Plot Birdies PREVIEW" Command="{Binding PlotBirdiesPreviewCommand}"/>
+                <MenuItem x:Name="mnuPlotBirdies" Header="Plot Birdies" Command="{Binding PlotBirdiesCommand}"/>
+            </MenuItem>-->
+
+            <!--<MenuItem Header="Take" Command="{Binding TakeCommand}"/>-->
+        </Menu>
+
+        <WindowsFormsHost Grid.Column="0" Grid.Row="1" Width="1280" Height="720" Margin="10,10,0,0" Background="Green">
+            <AxVideoToolkitLib:AxVxScene x:Name="vxScene"/>
+        </WindowsFormsHost>
+
+        <WindowsFormsHost Grid.Column="1" Grid.Row="1" Width="200" Height="720" Margin="10,10,0,0">
+            <SceneBrowserNET:SceneBrowserNETControl x:Name="sceneBrowser"/>
+        </WindowsFormsHost>
+    </Grid>
+    
+</Window>
